@@ -10,7 +10,7 @@
     margin: 20px;
     width: auto;
     height: auto;
-    background-color: #504669;
+    background-color: #7d7c80;
     position: relative;
 }
 
@@ -20,20 +20,25 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    background-color: rgba(210, 216, 210, 0.6);
+    background-color: rgba(233, 245, 244, 0.6);
     width: 33%;
     position: relative;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-.column-footer {
-    color: #393838;
-    font-size: 20px;
-    text-decoration: none;
+.column-title {
+    margin-left: 10%;
 }
 
-.column-footer:hover {
+.form-todo-link {
+    color: #3e3e3f;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 5%;
+}
+
+.form-todo-link:hover {
     text-shadow: 0.5px 0.5px 0.5px #185026;
 }
 
