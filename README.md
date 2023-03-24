@@ -1,10 +1,10 @@
 # GitHub Pages
 
-https://volivanmail.github.io/ahj_5_html_forms/
 
 # appveyor
 
-[![Build status](https://ci.appveyor.com/api/projects/status/cl25str7f093fwnh?svg=true)](https://ci.appveyor.com/project/Volivanmail/ahj-5-html-forms)
+[![Build status](https://ci.appveyor.com/api/projects/status/xvn837rikxhhqbi2?svg=true)](https://ci.appveyor.com/project/Volivanmail/ahj-6-working-with-files-dnd)
+
 
 
 
