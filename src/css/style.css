@@ -1,6 +1,18 @@
+body {
+    background-color: #639da6;
+}
+
+.header {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
 .main {
-    width: 100%;
-    /* position: relative; */
+    max-width: 1000px;
+    min-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .columns {
@@ -31,15 +43,25 @@
     margin-left: 10%;
 }
 
+.todo {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-inline-start: 0px;
+    z-index: 2;
+}
+
+.todo:hover{
+    z-index: 1;
+}
+
+
+
 .form-todo {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    /* width: 100%;
-    margin: 3px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; */
+    box-sizing: border-box;
 }
 
 .form-todo-link {
@@ -53,34 +75,26 @@
     text-shadow: 0.5px 0.5px 0.5px #185026;
 }
 
-.tasks {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.task{
-    width: 100%;
-
-}
-
 .label {
     width: 100%;
+    padding-bottom: 5px;
 }
 
 .input {
-    width: 100%;
+    width: 90%;
     box-sizing: border-box;
     border-radius: 10px;
     padding: 3px;
-    margin-bottom: 3px;
+    margin: 5%;
     overflow: hidden;
     resize: none;
+    align-content: last baseline;
 }
 
 .button {
     size: 20px;
     height: 30px;
+    margin-left: 10%;
     color: #fff;
     background-color: #5cb85c;
     border-color: #5cb85c;
@@ -91,3 +105,60 @@
     background-color: rgb(24, 122, 40);
     border-color: #131813;
 }
+
+.form-close {
+    margin-left: 10%;
+    height: 30px;
+    width: 30px;
+    color: #585656;
+    background-color: #b1b4b1;
+    border-color: #cccecc;
+    border-radius: 5px;
+}
+
+.form-close:hover {
+    color: #131813;
+    background-color: #9da49d;
+    border-color: #cccecc;
+}
+
+.todo-container {
+    width: auto;
+    margin: 5px 10px;
+    background-color: white;
+    border-color: #858785;
+    word-wrap: break-word;
+    border-radius: 10px;
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.todo-delete {
+    margin-left: 20%;
+    height: auto;
+    width: auto;
+    color: #585656;
+    border-color: #cccecc;
+    border-radius: 5px;
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    display: none;
+}
+
+.todo-delete:hover {
+    color: #131813;
+    border-color: #424342;
+}
+
+.todo-container:hover .todo-delete {
+    display: block;
+}
+
+.dragged {
+    position: absolute;
+    z-index: 999;
+    pointer-events: none;
+    background-color: #ffffff;
+    cursor: grabbing;
+  }
