@@ -110,7 +110,6 @@ export class Todo {
       const ulTodo = element.querySelector(".todo");
       let numberColumn = String(currentColumn);
       const listTodo = this.tasks[numberColumn];
-      console.log(listTodo);
       listTodo.forEach((todo) => {
         ulTodo.appendChild(this.createTodo(todo));
       });
