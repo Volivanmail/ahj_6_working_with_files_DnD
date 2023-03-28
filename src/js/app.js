@@ -4,7 +4,10 @@ import { dragAndDrop } from "./dnd";
 const todo = new Todo(document.querySelectorAll(".column"));
 
 document.addEventListener("DOMContentLoaded", () => {
-  todo.loadTasks();
+  const stData = JSON.parse(localStorage.getItem("data"));
+  if (stData !== null) {
+    todo.loadTasks();
+  }
 });
 
 const tasks = document.querySelector(".columns");

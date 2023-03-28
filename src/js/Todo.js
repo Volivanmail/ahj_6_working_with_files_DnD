@@ -43,9 +43,9 @@ export class Todo {
     button.textContent = "Добавить задачу";
     buttonClose.textContent = "X";
     input.placeholder = "Описание задачи";
-    input.required = true;
     input.rows = 5;
     input.maxLength = 300;
+    input.required = true;
     addFormLink.style.display = "none";
   }
 
@@ -76,6 +76,9 @@ export class Todo {
     const parent = e.target.closest(".column");
     const textArea = parent.querySelector(".input");
     const ulTodo = parent.querySelector(".todo");
+    if (!textArea.value) {
+      return;
+    }
     ulTodo.appendChild(this.createTodo(textArea.value));
     textArea.value = "";
     this.closeForm(e);
@@ -92,11 +95,10 @@ export class Todo {
   saveTasks() {
     let currentColumn = 0;
     this.elementList.forEach((element) => {
-      let numberColumn = String(currentColumn);
-      this.tasks[numberColumn] = [];
+      this.tasks[currentColumn] = [];
       const items = element.querySelectorAll(".todo-container");
       items.forEach((item) => {
-        this.tasks[numberColumn].push(item.textContent.slice(0, -1));
+        this.tasks[currentColumn].push(item.textContent.slice(0, -1));
       });
       currentColumn++;
     });
@@ -108,8 +110,7 @@ export class Todo {
     let currentColumn = 0;
     this.elementList.forEach((element) => {
       const ulTodo = element.querySelector(".todo");
-      let numberColumn = String(currentColumn);
-      const listTodo = this.tasks[numberColumn];
+      const listTodo = this.tasks[currentColumn];
       listTodo.forEach((todo) => {
         ulTodo.appendChild(this.createTodo(todo));
       });
