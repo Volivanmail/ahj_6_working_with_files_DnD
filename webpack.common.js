@@ -10,6 +10,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: 'auto',
+    chunkLoading: false,
+    wasmLoading: false,
   },
   module: {
     rules: [
